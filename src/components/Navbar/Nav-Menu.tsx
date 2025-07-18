@@ -10,9 +10,9 @@ import { Link } from "@tanstack/react-router";
 // Navigation menu items as data
 const navItems = [
   { name: "Dashboard", to: "/" },
-  { name: "Table", to: "/blog" },
-  { name: "Charts", to: "/about" },
-  { name: "Form", to: "/contact" },
+  { name: "Table", to: "/table" },
+  { name: "Charts", to: "/charts" },
+  { name: "Form", to: "/form" },
 ];
 
 export const NavMenu = (props: NavigationMenuProps) => (
