@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import type { Book, BookFormat, BookGenre } from "@/types";
+import type { Book, BookFormat, BookGenre } from "@/types_&_schemas";
 import {
   flexRender,
   getCoreRowModel,

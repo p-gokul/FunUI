@@ -1,9 +1,13 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute('/form')({
+export const Route = createFileRoute("/form")({
   component: RouteComponent,
-})
+});
 
 function RouteComponent() {
-  return <div>Hello "/form"!</div>
+  return (
+    <div className="w-full flex justify-center items-center min-h-screen">
+      Hello "/form"!
+    </div>
+  );
 }

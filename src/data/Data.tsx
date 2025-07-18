@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
-import { type Book } from "@/types";
+import { type Book } from "@/types_&_schemas";
 
 export const generateFakeBooks = (count = 1000): Book[] => {
   const books: Book[] = [];
