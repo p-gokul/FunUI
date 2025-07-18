@@ -1,3 +1,6 @@
+import Features06Page from "@/components/Hero/Features";
+import Footer05Page from "@/components/Hero/Footer";
+import Hero from "@/components/Hero/Hero";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
@@ -6,8 +9,10 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="p-2">
-      <h3>Welcome Home!</h3>
+    <div className="w-full">
+      <Hero />
+      <Features06Page />
+      <Footer05Page />
     </div>
   );
 }
