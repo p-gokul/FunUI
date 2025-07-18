@@ -27,7 +27,9 @@ export const generateFakeBooks = (count = 1000): Book[] => {
         "History",
         "Horror",
       ]),
-      price: parseFloat(faker.commerce.price({ min: 5, max: 50 })),
+      price: Number(
+        faker.number.int({ min: 1000, max: 9000, multipleOf: 100 })
+      ),
       published_date: faker.date.past({ years: 20 }),
       publisher: faker.company.name(),
       rating: faker.number.int({ min: 1, max: 5 }),
