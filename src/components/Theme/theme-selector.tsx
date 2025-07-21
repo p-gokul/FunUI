@@ -5,11 +5,11 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectSeparator,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useTranslation } from "react-i18next";
 
 const DEFAULT_THEMES = [
   {
@@ -44,7 +44,7 @@ const DEFAULT_THEMES = [
 
 export function ThemeSelector() {
   const { activeTheme, setActiveTheme } = useThemeConfig();
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className="flex items-center gap-2">
@@ -57,16 +57,19 @@ export function ThemeSelector() {
           size="sm"
           className="justify-start *:data-[slot=select-value]:w-12"
         >
-          <span className="text-muted-foreground hidden sm:block">Theme</span>
-          <span className="text-muted-foreground block sm:hidden">Theme</span>
+          <span className="text-muted-foreground hidden sm:block">
+            {t("themes.theme")}
+          </span>
+          <span className="text-muted-foreground block sm:hidden">
+            {t("themes.theme")}
+          </span>
           <SelectValue placeholder="Select a theme" />
         </SelectTrigger>
         <SelectContent align="end">
           <SelectGroup>
-            <SelectLabel>Default</SelectLabel>
             {DEFAULT_THEMES.map((theme) => (
               <SelectItem key={theme.name} value={theme.value}>
-                {theme.name}
+                {t(`themes.${theme.name}`)}
               </SelectItem>
             ))}
           </SelectGroup>

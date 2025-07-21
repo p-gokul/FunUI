@@ -3,6 +3,7 @@ import "./index.css";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { ThemeProvider } from "./components/Theme/theme-provider";
 import { ActiveThemeProvider } from "./components/Theme/active-theme";
+import "./i18n";
 
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";

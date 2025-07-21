@@ -3,13 +3,19 @@ import { NavigationSheet } from "./NavigationSheet";
 import { Earth } from "lucide-react";
 import { ThemeToggle } from "../Theme/Theme-Toggle";
 import { ThemeSelector } from "../Theme/theme-selector";
+import { LanguageSwitcher } from "@/i18n/LanguageDropdown";
+import { useNavigate } from "@tanstack/react-router";
 
 const NavbarPage = () => {
+  const navigate = useNavigate();
   return (
     <div className="z-50 bg-transparent">
-      <nav className="fixed top-6 inset-x-4 h-16 bg-background border dark:border-slate-700/70 max-w-screen-2xl mx-auto rounded-full">
+      <nav className="fixed top-6 inset-x-4 h-16 bg-background/60 backdrop-blur-sm border dark:border-slate-700/70 max-w-screen-2xl mx-auto rounded-full">
         <div className="h-full flex items-center justify-between mx-auto px-4 ">
-          <div className="text-xl flex flex-row space-x-1 items-center">
+          <div
+            className="text-xl flex flex-row space-x-1 items-center cursor-pointer"
+            onClick={() => navigate({ to: "/" })}
+          >
             <Earth />
             <div>FunUI</div>
           </div>
@@ -18,8 +24,8 @@ const NavbarPage = () => {
           <NavMenu className="hidden md:block" />
 
           <div className="flex items-center gap-3">
+            <LanguageSwitcher />
             <ThemeSelector />
-            {/* <Button className="rounded-full">Get Started</Button> */}
             <ThemeToggle />
 
             {/* Mobile Menu */}

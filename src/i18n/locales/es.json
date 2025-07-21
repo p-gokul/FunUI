@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "heading": "Tablas avanzadas, gráficos con múltiples temas y formularios robustos",
+    "subheading": "Explora una colección de bloques y componentes Shadcn UI, listos para previsualizar y copiar. Optimiza tu flujo de desarrollo con ejemplos fáciles de implementar.",
+    "get_started": "Comenzar",
+    "github": "Github"
+  },
+  "themes": {
+    "theme": "Tema",
+    "default": "Predeterminado",
+    "blue": "Azul",
+    "green": "Verde",
+    "amber": "Ámbar",
+    "rose": "Rosa",
+    "purple": "Púrpura",
+    "orange": "Naranja"
+  },
+  "navbar": {
+    "dashboard": "Panel",
+    "table": "Tabla",
+    "chart": "Gráficos",
+    "form": "Formulario"
+  },
+  "dashboard": {
+    "heading": "Impulsa tu flujo de trabajo con funciones inteligentes de UI",
+    "features": {
+      "table": "Tabla",
+      "table_title": "Tablas de datos potentes y personalizables",
+      "table_details": "Incluye funciones como agrupación de encabezados, filtrado de columnas, alternancia de visibilidad, selección de filas, paginación y ordenamiento, todo personalizable según tus necesidades.",
+      "chart": "Gráficos",
+      "chart_title": "Visualiza datos con gráficos de barras, pastel y líneas",
+      "chart_details": "Convierte datos complejos en visualizaciones útiles utilizando gráficos de barras, pastel y líneas; ideal para informes, paneles y análisis de negocio.",
+      "form": "Formulario",
+      "form_title": "Formularios con tipado seguro usando Zod y React Hook Form",
+      "form_details": "Crea formularios robustos con React Hook Form y Zod para validación de esquemas, asegurando un manejo preciso de entradas y una experiencia de desarrollo fluida.",
+      "dashboard": "Panel",
+      "dashboard_title": "Panel centralizado y dinámico",
+      "dashboard_details": "Supervisa todo en un solo lugar, desde KPIs hasta actividad reciente. Soporta actualizaciones en tiempo real, widgets y vistas personalizadas adaptadas a tu flujo de trabajo.",
+      "global": "Funciones Globales",
+      "global_title": "Soporte multilenguaje y multi-tema",
+      "global_details": "Cambia fácilmente entre idiomas y temas claro/oscuro. Personaliza tu experiencia con localización incorporada y conmutación de temas."
+    }
+  }
+}
