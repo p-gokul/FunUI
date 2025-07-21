@@ -58,5 +58,24 @@
     "number_of_rows": "Number of Rows",
     "previous": "Previous",
     "next": "Next"
+  },
+  "charts": {
+    "genre_bar_chart": {
+      "title": "Bar Chart - Book Genres",
+      "description": "Distribution of books by genre",
+      "footer_note": "Based on 1,000 randomly generated books",
+      "books_label": "Books"
+    },
+    "genre_pie_chart": {
+      "title": "Pie Chart - Book Genres",
+      "description": "Distribution of books by genre",
+      "footer_note": "Based on 1,000 randomly generated books"
+    },
+    "genre_radar_chart": {
+      "title": "Radar Chart - Book Genres",
+      "description": "Distribution of books by genre",
+      "footer_note": "Based on 1,000 randomly generated books",
+      "books_label": "Books"
+    }
   }
 }

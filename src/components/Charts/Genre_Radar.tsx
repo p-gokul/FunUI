@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts";
 
 import {
@@ -23,26 +24,29 @@ export const description = "Radar chart showing book counts by genre";
 // 1. Generate books
 const books: Book[] = generateFakeBooks(1000);
 
-// 4. Chart data (each genre and its count)
+// 2. Chart data
 const chartData = bookGenres.map((genre) => ({
   genre,
   count: books.filter((b) => b.genre === genre).length,
 }));
 
-// 5. Config (optional)
-const chartConfig = {
-  count: {
-    label: "Books",
-    color: "var(--color-chart-1)",
-  },
-} satisfies ChartConfig;
-
 export function GenreRadarChart() {
+  const { t } = useTranslation();
+
+  const chartConfig: ChartConfig = {
+    count: {
+      label: t("charts.genre_radar_chart.books_label"),
+      color: "var(--color-chart-1)",
+    },
+  };
+
   return (
     <Card>
       <CardHeader className="items-center pb-4">
-        <CardTitle>Radar Chart - Book Genres</CardTitle>
-        <CardDescription>Distribution of books by genre</CardDescription>
+        <CardTitle>{t("charts.genre_radar_chart.title")}</CardTitle>
+        <CardDescription>
+          {t("charts.genre_radar_chart.description")}
+        </CardDescription>
       </CardHeader>
       <CardContent className="pb-0">
         <ChartContainer
@@ -95,8 +99,8 @@ export function GenreRadarChart() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
-        <div className="text-muted-foreground leading-none ">
-          Based on 1,000 randomly generated books
+        <div className="text-muted-foreground leading-none">
+          {t("charts.genre_radar_chart.footer_note")}
         </div>
       </CardFooter>
     </Card>

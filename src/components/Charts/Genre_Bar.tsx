@@ -15,30 +15,34 @@ import {
 } from "@/components/ui/chart";
 import { bookGenres, type Book } from "@/types_&_schemas";
 import { generateFakeBooks } from "@/data/Data";
+import { useTranslation } from "react-i18next";
 
 // 1. Generate book data
 const books: Book[] = generateFakeBooks(1000);
 
-// 3. Aggregate chart data
+// 2. Aggregate chart data
 const chartData = bookGenres.map((genre) => ({
   genre,
   count: books.filter((b) => b.genre === genre).length,
 }));
 
-// 4. Chart config
-const chartConfig = {
-  count: {
-    label: "Books",
-    color: "var(--chart-2)",
-  },
-} satisfies ChartConfig;
+export default function GenreBarChart() {
+  const { t } = useTranslation();
 
-export default function BookGenreBarChart() {
+  const chartConfig = {
+    count: {
+      label: t("charts.genre_bar_chart.books_label"),
+      color: "var(--chart-2)",
+    },
+  } satisfies ChartConfig;
+
   return (
     <Card className="flex flex-col">
       <CardHeader>
-        <CardTitle>Bar Chart - Book Genres</CardTitle>
-        <CardDescription>Distribution of books by genre</CardDescription>
+        <CardTitle>{t("charts.genre_bar_chart.title")}</CardTitle>
+        <CardDescription>
+          {t("charts.genre_bar_chart.description")}
+        </CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer config={chartConfig} className="h-full w-full">
@@ -50,7 +54,7 @@ export default function BookGenreBarChart() {
               tickMargin={10}
               axisLine={false}
               interval={0}
-              angle={-30}
+              angle={-35}
               textAnchor="end"
               height={80}
             />
@@ -69,9 +73,9 @@ export default function BookGenreBarChart() {
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col  gap-2 text-sm">
+      <CardFooter className="flex-col gap-2 text-sm">
         <div className="leading-none text-muted-foreground">
-          Based on 1,000 randomly generated books
+          {t("charts.genre_bar_chart.footer_note")}
         </div>
       </CardFooter>
     </Card>

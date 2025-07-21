@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Pie, PieChart } from "recharts";
 
 import {
@@ -25,14 +26,14 @@ const books: Book[] = generateFakeBooks(1000);
 // 2. Assign genre colors (theme variable-based)
 const genreColors: Record<BookGenre, string> = {
   Fiction: "var(--color-chart-1)",
-  "Non-fiction": "var(--color-chart-2)",
+  Comic: "var(--color-chart-2)",
   Mystery: "var(--color-chart-3)",
   Fantasy: "var(--color-chart-4)",
   Romance: "var(--color-chart-5)",
-  "Science Fiction": "var(--color-chart-6)",
+  Memoir: "var(--color-chart-6)",
   Biography: "var(--color-chart-7)",
   History: "var(--color-chart-8)",
-  Horror: "var(--color-chart-9)",
+  Adventure: "var(--color-chart-9)",
 };
 
 // 3. Aggregate chart data
@@ -54,11 +55,15 @@ const chartConfig = Object.fromEntries(
 ) satisfies ChartConfig;
 
 export function GenrePieChart() {
+  const { t } = useTranslation();
+
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Pie Chart - Book Genres</CardTitle>
-        <CardDescription>Distribution of books by genre</CardDescription>
+        <CardTitle>{t("charts.genre_pie_chart.title")}</CardTitle>
+        <CardDescription>
+          {t("charts.genre_pie_chart.description")}
+        </CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -83,7 +88,7 @@ export function GenrePieChart() {
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
         <div className="text-muted-foreground leading-none">
-          Showing total books categorized by genre
+          {t("charts.genre_pie_chart.footer_note")}
         </div>
       </CardFooter>
     </Card>

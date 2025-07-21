@@ -7,15 +7,15 @@ export const bookFormats = [
 export type BookFormat = (typeof bookFormats)[number];
 
 export const bookGenres = [
+  "Comic",
   "Fiction",
-  "Non-fiction",
+  "Memoir",
   "Mystery",
   "Fantasy",
   "Romance",
-  "Science Fiction",
+  "Adventure",
   "Biography",
   "History",
-  "Horror",
 ] as const;
 
 export type BookGenre = (typeof bookGenres)[number];

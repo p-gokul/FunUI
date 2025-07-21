@@ -58,5 +58,24 @@
     "number_of_rows": "Número de filas",
     "previous": "Anterior",
     "next": "Siguiente"
+  },
+  "charts": {
+    "genre_bar_chart": {
+      "title": "Gráfico de Barras - Géneros de Libros",
+      "description": "Distribución de libros por género",
+      "footer_note": "Basado en 1,000 libros generados aleatoriamente",
+      "books_label": "Libros"
+    },
+    "genre_pie_chart": {
+      "title": "Gráfico de Pastel - Géneros de Libros",
+      "description": "Distribución de libros por género",
+      "footer_note": "Basado en 1,000 libros generados aleatoriamente"
+    },
+    "genre_radar_chart": {
+      "title": "Gráfico de Radar - Géneros de Libros",
+      "description": "Distribución de libros por género",
+      "footer_note": "Basado en 1,000 libros generados aleatoriamente",
+      "books_label": "Libros"
+    }
   }
 }
