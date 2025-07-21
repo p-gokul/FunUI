@@ -21,7 +21,7 @@ type Props = {
   options: string[];
 };
 
-const FormSelect = ({ name, label, options }: Props) => {
+const FormSelect = ({ name, placeholder, label, options }: Props) => {
   const { control } = useFormContext();
 
   return (
@@ -34,7 +34,7 @@ const FormSelect = ({ name, label, options }: Props) => {
           <Select onValueChange={field.onChange} value={field.value ?? ""}>
             <FormControl>
               <SelectTrigger>
-                <SelectValue placeholder="Select" />
+                <SelectValue placeholder={placeholder} />
               </SelectTrigger>
             </FormControl>
             <SelectContent>

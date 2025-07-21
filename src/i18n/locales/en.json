@@ -1,7 +1,7 @@
 {
   "hero": {
     "heading": "Advanced Table, Multi-Theme Charts and Robust Forms",
-    "subheading": "Explore a collection of Shadcn UI blocks and components, ready to preview and copy. Streamline your development workflow with easy-to-implement examples.",
+    "subheading": "Explore a collection of Shadcn UI blocks and components. Streamline your development workflow with easy-to-implement examples.",
     "get_started": "Get Started",
     "github": "Github"
   },
@@ -29,13 +29,10 @@
       "table_details": "Includes features like header grouping, column filtering, visibility toggles, row selection, pagination, and sorting — all customizable for your needs.",
       "chart": "Charts",
       "chart_title": "Visualize Data with Bar, Pie, and Line Charts",
-      "chart_details": "Turn complex data into insightful visualizations using bar, pie, and line charts — ideal for reports, dashboards, and business intelligence.",
+      "chart_details": "Turn complex data into insightful visualizations using Bar, Pie, and Radar charts — ideal for reports, dashboards, and business intelligence.",
       "form": "Form",
       "form_title": "Type-Safe Forms with Zod and React Hook Form",
       "form_details": "Build robust forms using React Hook Form and Zod for schema validation, ensuring accurate input handling with a smooth developer experience.",
-      "dashboard": "Dashboard",
-      "dashboard_title": "Centralized and Dynamic Dashboard",
-      "dashboard_details": "Track everything in one place — from KPIs to recent activity. Supports real-time updates, widgets, and custom views tailored to your workflow.",
       "global": "Global Features",
       "global_title": "Multi-Language and Multi-Theme Support",
       "global_details": "Switch seamlessly between languages and light/dark themes. Personalize your experience with built-in localization and theme toggling."
@@ -76,6 +73,25 @@
       "description": "Distribution of books by genre",
       "footer_note": "Based on 1,000 randomly generated books",
       "books_label": "Books"
+    }
+  },
+  "form": {
+    "form_title": "Submission Form",
+    "title": "Title",
+    "author": "Author",
+    "format": "Format",
+    "genre": "Genre",
+    "price": "Price",
+    "published_date": "Published Date",
+    "publisher": "Publisher",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "placeholders": {
+      "select": "Select",
+      "select_date": "Select Date",
+      "title": "Atomic Habits....",
+      "author": "James Clear...",
+      "publisher": "Penguin Random House..."
     }
   }
 }

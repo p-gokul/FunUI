@@ -16,24 +16,18 @@ import {
 } from "@/components/ui/popover";
 import { CalendarIcon } from "lucide-react";
 import { Calendar } from "../ui/calendar";
+import { bookFormats, bookGenres } from "@/types_&_schemas";
+import { useTranslation } from "react-i18next";
 
-const BookFormatOptions = ["Hardcover", "Paperback", "eBook", "Audiobook"];
-const BookGenreOptions = [
-  "Fiction",
-  "Non-fiction",
-  "Mystery",
-  "Fantasy",
-  "Romance",
-  "Science Fiction",
-  "Biography",
-  "History",
-  "Horror",
-];
+const BookFormatOptions = [...bookFormats];
+const BookGenreOptions = [...bookGenres];
 
 function BookForm() {
   const methods = useForm<BookFields>({
     resolver: zodResolver(BookSchema),
   });
+
+  const { t } = useTranslation();
 
   const onSubmit: SubmitHandler<BookFields> = (formData) => {
     console.log(formData);
@@ -41,26 +35,36 @@ function BookForm() {
     methods.reset();
   };
   return (
-    <Card className="w-[25vw] mt-4">
+    <Card className="md:w-[25vw] sm:w-[50vw] mt-4">
       <CardHeader>
-        <CardTitle>Submission Form</CardTitle>
+        <CardTitle className="text-center">{t("form.form_title")}</CardTitle>
       </CardHeader>
       <CardContent>
         <Form {...methods}>
           <form onSubmit={methods.handleSubmit(onSubmit)} className="space-y-4">
-            <FormInputText name="name" label="Title" />
-            <FormInputText name="author" label="author" />
+            <FormInputText
+              name="name"
+              label={t("form.title")}
+              placeholder={t("form.placeholders.title")}
+            />
+            <FormInputText
+              name="author"
+              label={t("form.author")}
+              placeholder={t("form.placeholders.author")}
+            />
             <FormSelect
               name="format"
-              label="Select book format"
+              label={t("form.format")}
+              placeholder={t("form.placeholders.select")}
               options={BookFormatOptions}
             />
             <FormSelect
               name="genre"
-              label="Select book genre"
+              label={t("form.genre")}
+              placeholder={t("form.placeholders.select")}
               options={BookGenreOptions}
             />
-            <FormInputNumber name="price" label="price" />
+            <FormInputNumber name="price" label={t("form.price")} />
 
             <Controller
               control={methods.control}
@@ -79,7 +83,7 @@ function BookForm() {
                       {field.value ? (
                         format(field.value, "PP")
                       ) : (
-                        <span>Select Date</span>
+                        <span>{t("form.placeholders.select_date")}</span>
                       )}
                     </Button>
                   </PopoverTrigger>
@@ -106,13 +110,19 @@ function BookForm() {
                 </Popover>
               )}
             />
-            <FormInputText name="publisher" label="publisher" />
+            <FormInputText
+              name="publisher"
+              label={t("form.publisher")}
+              placeholder={t("form.placeholders.publisher")}
+            />
             <Button
               disabled={methods.formState.isSubmitting}
               className="mx-auto w-full"
               type="submit"
             >
-              {methods.formState.isSubmitting ? "Submitting..." : "Submit"}
+              {methods.formState.isSubmitting
+                ? t("form.submitting")
+                : t("form.submit")}
             </Button>
           </form>
         </Form>

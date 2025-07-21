@@ -77,5 +77,24 @@
       "footer_note": "Basado en 1,000 libros generados aleatoriamente",
       "books_label": "Libros"
     }
+  },
+  "form": {
+    "form_title": "Formulario de Envío",
+    "title": "Título",
+    "author": "Autor",
+    "format": "Formato",
+    "genre": "Género",
+    "price": "Precio",
+    "published_date": "Fecha de Publicación",
+    "publisher": "Editorial",
+    "submit": "Enviar",
+    "submitting": "Enviando...",
+    "placeholders": {
+      "select": "Seleccionar",
+      "select_date": "Seleccionar Fecha",
+      "title": "Hábitos Atómicos....",
+      "author": "James Clear...",
+      "publisher": "Penguin Random House..."
+    }
   }
 }

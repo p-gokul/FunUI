@@ -11,9 +11,6 @@ const features = [
     key: "form",
   },
   {
-    key: "dashboard",
-  },
-  {
     key: "global",
   },
 ];

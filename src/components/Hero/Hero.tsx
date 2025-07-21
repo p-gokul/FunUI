@@ -25,9 +25,9 @@ const Hero = () => {
             {t("hero.get_started")} <ArrowUpRight className="!h-5 !w-5" />
           </Button>
           <Button
-            variant="outline"
+            variant="ghost"
             size="lg"
-            className="rounded-full text-base shadow-none"
+            className="rounded-full text-base shadow-none border-1 border-primary"
           >
             <Github className="!h-5 !w-5" /> {t("hero.github")}
           </Button>
