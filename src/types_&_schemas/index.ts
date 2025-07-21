@@ -1,15 +1,24 @@
-export type BookFormat = "Hardcover" | "Paperback" | "eBook" | "Audiobook";
+export const bookFormats = [
+  "Hardcover",
+  "Paperback",
+  "eBook",
+  "Audiobook",
+] as const;
+export type BookFormat = (typeof bookFormats)[number];
 
-export type BookGenre =
-  | "Fiction"
-  | "Non-fiction"
-  | "Mystery"
-  | "Fantasy"
-  | "Romance"
-  | "Science Fiction"
-  | "Biography"
-  | "History"
-  | "Horror";
+export const bookGenres = [
+  "Fiction",
+  "Non-fiction",
+  "Mystery",
+  "Fantasy",
+  "Romance",
+  "Science Fiction",
+  "Biography",
+  "History",
+  "Horror",
+] as const;
+
+export type BookGenre = (typeof bookGenres)[number];
 export interface Book {
   name: string;
   author: string;

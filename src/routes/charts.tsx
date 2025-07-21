@@ -1,9 +1,14 @@
-import { createFileRoute } from '@tanstack/react-router'
+import ChartsPage from "@/components/Charts/Charts";
+import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute('/charts')({
+export const Route = createFileRoute("/charts")({
   component: RouteComponent,
-})
+});
 
 function RouteComponent() {
-  return <div>Hello "/charts"!</div>
+  return (
+    <div className="w-full  min-h-screen p-4">
+      <ChartsPage />
+    </div>
+  );
 }

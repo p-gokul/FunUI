@@ -118,3 +118,143 @@
     @apply bg-background text-foreground;
   }
 }
+
+.theme-default,
+.theme-default-scaled {
+  --primary: var(--color-neutral-600);
+  --primary-foreground: var(--color-neutral-50);
+  --color-chart-1: var(--color-blue-100);
+  --color-chart-2: var(--color-blue-200);
+  --color-chart-3: var(--color-blue-300);
+  --color-chart-4: var(--color-blue-400);
+  --color-chart-5: var(--color-blue-500);
+  --color-chart-6: var(--color-blue-600);
+  --color-chart-7: var(--color-blue-700);
+  --color-chart-8: var(--color-blue-800);
+  --color-chart-9: var(--color-blue-900);
+
+  @variant dark {
+    --primary: var(--color-neutral-500);
+    --primary-foreground: var(--color-neutral-50);
+  }
+}
+
+.theme-blue,
+.theme-blue-scaled {
+  --primary: var(--color-blue-600);
+  --primary-foreground: var(--color-blue-50);
+  --color-chart-1: var(--color-blue-100);
+  --color-chart-2: var(--color-blue-200);
+  --color-chart-3: var(--color-blue-300);
+  --color-chart-4: var(--color-blue-400);
+  --color-chart-5: var(--color-blue-500);
+  --color-chart-6: var(--color-blue-600);
+  --color-chart-7: var(--color-blue-700);
+  --color-chart-8: var(--color-blue-800);
+  --color-chart-9: var(--color-blue-900);
+
+  @variant dark {
+    --primary: var(--color-blue-500);
+    --primary-foreground: var(--color-blue-50);
+  }
+}
+
+.theme-green,
+.theme-green-scaled {
+  --primary: var(--color-lime-600);
+  --primary-foreground: var(--color-lime-50);
+  --color-chart-1: var(--color-lime-100);
+  --color-chart-2: var(--color-lime-200);
+  --color-chart-3: var(--color-lime-300);
+  --color-chart-4: var(--color-lime-400);
+  --color-chart-5: var(--color-lime-500);
+  --color-chart-6: var(--color-lime-600);
+  --color-chart-7: var(--color-lime-700);
+  --color-chart-8: var(--color-lime-800);
+  --color-chart-9: var(--color-lime-900);
+
+  @variant dark {
+    --primary: var(--color-lime-600);
+    --primary-foreground: var(--color-lime-50);
+  }
+}
+
+.theme-amber,
+.theme-amber-scaled {
+  --primary: var(--color-amber-600);
+  --primary-foreground: var(--color-amber-50);
+  --color-chart-1: var(--color-amber-100);
+  --color-chart-2: var(--color-amber-200);
+  --color-chart-3: var(--color-amber-300);
+  --color-chart-4: var(--color-amber-400);
+  --color-chart-5: var(--color-amber-500);
+  --color-chart-6: var(--color-amber-600);
+  --color-chart-7: var(--color-amber-700);
+  --color-chart-8: var(--color-amber-800);
+  --color-chart-9: var(--color-amber-900);
+
+  @variant dark {
+    --primary: var(--color-amber-500);
+    --primary-foreground: var(--color-amber-50);
+  }
+}
+
+.theme-orange,
+.theme-orange-scaled {
+  --primary: var(--color-orange-600);
+  --primary-foreground: var(--color-orange-50);
+  --color-chart-1: var(--color-orange-100);
+  --color-chart-2: var(--color-orange-200);
+  --color-chart-3: var(--color-orange-300);
+  --color-chart-4: var(--color-orange-400);
+  --color-chart-5: var(--color-orange-500);
+  --color-chart-6: var(--color-orange-600);
+  --color-chart-7: var(--color-orange-700);
+  --color-chart-8: var(--color-orange-800);
+  --color-chart-9: var(--color-orange-900);
+
+  @variant dark {
+    --primary: var(--color-orange-500);
+    --primary-foreground: var(--color-orange-50);
+  }
+}
+
+.theme-purple,
+.theme-purple-scaled {
+  --primary: var(--color-purple-600);
+  --primary-foreground: var(--color-purple-50);
+  --color-chart-1: var(--color-purple-100);
+  --color-chart-2: var(--color-purple-200);
+  --color-chart-3: var(--color-purple-300);
+  --color-chart-4: var(--color-purple-400);
+  --color-chart-5: var(--color-purple-500);
+  --color-chart-6: var(--color-purple-600);
+  --color-chart-7: var(--color-purple-700);
+  --color-chart-8: var(--color-purple-800);
+  --color-chart-9: var(--color-purple-900);
+
+  @variant dark {
+    --primary: var(--color-purple-500);
+    --primary-foreground: var(--color-purple-50);
+  }
+}
+
+.theme-rose,
+.theme-rose-scaled {
+  --primary: var(--color-rose-600);
+  --primary-foreground: var(--color-rose-50);
+  --color-chart-1: var(--color-rose-100);
+  --color-chart-2: var(--color-rose-200);
+  --color-chart-3: var(--color-rose-300);
+  --color-chart-4: var(--color-rose-400);
+  --color-chart-5: var(--color-rose-500);
+  --color-chart-6: var(--color-rose-600);
+  --color-chart-7: var(--color-rose-700);
+  --color-chart-8: var(--color-rose-800);
+  --color-chart-9: var(--color-rose-900);
+
+  @variant dark {
+    --primary: var(--color-rose-500);
+    --primary-foreground: var(--color-rose-50);
+  }
+}

@@ -1,32 +1,17 @@
 import { faker } from "@faker-js/faker";
-import { type Book } from "@/types_&_schemas";
+import { type Book, bookFormats, bookGenres } from "@/types_&_schemas";
 
 export const generateFakeBooks = (count = 1000): Book[] => {
   const books: Book[] = [];
 
-  faker.seed(25);
+  faker.seed(8);
 
   for (let i = 0; i < count; i++) {
     books.push({
       name: faker.lorem.words(3),
       author: `${faker.person.firstName()} ${faker.person.lastName()}`,
-      format: faker.helpers.arrayElement([
-        "Hardcover",
-        "Paperback",
-        "eBook",
-        "Audiobook",
-      ]),
-      genre: faker.helpers.arrayElement([
-        "Fiction",
-        "Non-fiction",
-        "Mystery",
-        "Fantasy",
-        "Romance",
-        "Science Fiction",
-        "Biography",
-        "History",
-        "Horror",
-      ]),
+      format: faker.helpers.arrayElement(bookFormats),
+      genre: faker.helpers.arrayElement(bookGenres),
       price: Number(
         faker.number.int({ min: 1000, max: 9000, multipleOf: 100 })
       ),

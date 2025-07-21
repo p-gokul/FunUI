@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
 import { NavMenu } from "./Nav-Menu";
 import { NavigationSheet } from "./NavigationSheet";
 import { Earth } from "lucide-react";
 import { ThemeToggle } from "../Theme/Theme-Toggle";
+import { ThemeSelector } from "../Theme/theme-selector";
 
 const NavbarPage = () => {
   return (
@@ -18,12 +18,7 @@ const NavbarPage = () => {
           <NavMenu className="hidden md:block" />
 
           <div className="flex items-center gap-3">
-            <Button
-              variant="outline"
-              className="hidden sm:inline-flex rounded-full"
-            >
-              Sign In
-            </Button>
+            <ThemeSelector />
             {/* <Button className="rounded-full">Get Started</Button> */}
             <ThemeToggle />
 

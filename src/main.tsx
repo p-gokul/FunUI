@@ -2,6 +2,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { ThemeProvider } from "./components/Theme/theme-provider";
+import { ActiveThemeProvider } from "./components/Theme/active-theme";
 
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";
@@ -17,7 +18,9 @@ declare module "@tanstack/react-router" {
 }
 
 createRoot(document.getElementById("root")!).render(
-  <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-    <RouterProvider router={router} />
-  </ThemeProvider>
+  <ActiveThemeProvider>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  </ActiveThemeProvider>
 );
