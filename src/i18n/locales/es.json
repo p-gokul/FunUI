@@ -40,5 +40,23 @@
       "global_title": "Soporte multilenguaje y multi-tema",
       "global_details": "Cambia fácilmente entre idiomas y temas claro/oscuro. Personaliza tu experiencia con localización incorporada y conmutación de temas."
     }
+  },
+  "table": {
+    "title": "Título",
+    "author": "Autor",
+    "format": "Formato",
+    "genre": "Género",
+    "price": "Precio",
+    "published_date": "Fecha de publicación",
+    "publisher": "Editorial",
+    "rating": "Calificación",
+    "toggle_all": "Mostrar/Ocultar Todo",
+    "min": "Mínimo",
+    "max": "Máximo",
+    "search": "Buscar...",
+    "all": "Todos",
+    "number_of_rows": "Número de filas",
+    "previous": "Anterior",
+    "next": "Siguiente"
   }
 }

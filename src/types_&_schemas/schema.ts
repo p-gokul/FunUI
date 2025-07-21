@@ -6,7 +6,7 @@ export const BookFormatSchema = z.enum(bookFormats);
 export const BookGenreSchema = z.enum(bookGenres);
 
 export const BookSchema = z.object({
-  name: z.string(),
+  title: z.string(),
   author: z.string(),
   format: BookFormatSchema,
   genre: BookGenreSchema,

@@ -8,7 +8,7 @@ export const generateFakeBooks = (count = 1000): Book[] => {
 
   for (let i = 0; i < count; i++) {
     books.push({
-      name: faker.lorem.words(3),
+      title: faker.lorem.words(3),
       author: `${faker.person.firstName()} ${faker.person.lastName()}`,
       format: faker.helpers.arrayElement(bookFormats),
       genre: faker.helpers.arrayElement(bookGenres),

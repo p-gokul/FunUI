@@ -41,6 +41,8 @@ import { useEffect, useState, type InputHTMLAttributes } from "react";
 import { Checkbox } from "../ui/checkbox";
 import { Separator } from "../ui/separator";
 import { Input } from "../ui/input";
+import { useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
 
 const BOOK_FORMATS: BookFormat[] = [
   "Hardcover",
@@ -69,22 +71,22 @@ declare module "@tanstack/react-table" {
   }
 }
 
-const defaultColumns: ColumnDef<Book>[] = [
+const getDefaultColumns = (t: TFunction): ColumnDef<Book>[] => [
   {
-    accessorKey: "name",
-    header: "Title",
+    accessorKey: "title",
+    header: t("table.title"),
     cell: (props: any) => <p>{props.getValue()}</p>,
     enableSorting: false,
   },
   {
     accessorKey: "author",
-    header: "Author",
+    header: t("table.author"),
     cell: (props: any) => <p>{props.getValue()}</p>,
     enableSorting: false,
   },
   {
     accessorKey: "format",
-    header: "Format",
+    header: t("table.format"),
     cell: (props: any) => <p>{props.getValue()}</p>,
     meta: {
       filterVariant: "select",
@@ -93,7 +95,7 @@ const defaultColumns: ColumnDef<Book>[] = [
   },
   {
     accessorKey: "genre",
-    header: "Genre",
+    header: t("table.genre"),
     cell: (props: any) => <p>{props.getValue()}</p>,
     meta: {
       filterVariant: "select",
@@ -102,7 +104,7 @@ const defaultColumns: ColumnDef<Book>[] = [
   },
   {
     accessorKey: "price",
-    header: "Price",
+    header: t("table.price"),
     cell: (props: any) => <p>{props.getValue()}</p>,
     meta: {
       filterVariant: "range",
@@ -111,7 +113,7 @@ const defaultColumns: ColumnDef<Book>[] = [
   },
   {
     accessorKey: "published_date",
-    header: "Published Date",
+    header: t("table.published_date"),
     cell: (props: any) => {
       const date: Date = props.getValue();
       return <p>{date.toLocaleDateString()}</p>;
@@ -121,13 +123,13 @@ const defaultColumns: ColumnDef<Book>[] = [
   },
   {
     accessorKey: "publisher",
-    header: "publisher",
+    header: t("table.publisher"),
     cell: (props: any) => <p>{props.getValue()}</p>,
     enableSorting: false,
   },
   {
     accessorKey: "rating",
-    header: "Rating",
+    header: t("table.rating"),
     cell: (props: any) => <p>{props.getValue()}</p>,
     enableSorting: true,
     enableColumnFilter: false,
@@ -137,6 +139,7 @@ const defaultColumns: ColumnDef<Book>[] = [
 function Filter({ column }: { column: Column<any, unknown> }) {
   const columnFilterValue = column.getFilterValue();
   const { filterVariant } = column.columnDef.meta ?? {};
+  const { t } = useTranslation();
 
   const getSelectOptions = () => {
     if (column.id === "format") return BOOK_FORMATS;
@@ -152,7 +155,7 @@ function Filter({ column }: { column: Column<any, unknown> }) {
         onChange={(value) =>
           column.setFilterValue((old: [number, number]) => [value, old?.[1]])
         }
-        placeholder={`Min`}
+        placeholder={t("table.min")}
         className="w-24 border shadow rounded"
       />
       <DebouncedInput
@@ -161,7 +164,7 @@ function Filter({ column }: { column: Column<any, unknown> }) {
         onChange={(value) =>
           column.setFilterValue((old: [number, number]) => [old?.[0], value])
         }
-        placeholder={`Max`}
+        placeholder={t("table.max")}
         className="w-24 border shadow rounded"
       />
     </div>
@@ -176,7 +179,7 @@ function Filter({ column }: { column: Column<any, unknown> }) {
         <SelectValue placeholder="Select value" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="all">All</SelectItem>
+        <SelectItem value="all">{t("table.all")}</SelectItem>
         {getSelectOptions().map((option) => (
           <SelectItem key={option} value={option}>
             {option}
@@ -188,7 +191,7 @@ function Filter({ column }: { column: Column<any, unknown> }) {
     <DebouncedInput
       className="w-36 border shadow rounded"
       onChange={(value) => column.setFilterValue(value)}
-      placeholder={`Search...`}
+      placeholder={t("table.search")}
       type="text"
       value={(columnFilterValue ?? "") as string}
     />
@@ -239,10 +242,13 @@ export const BooksTable = ({ data }: { data: Book[] }) => {
   const [columnVisibility, setColumnVisibility] = useState({});
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+  const { t } = useTranslation();
+
+  // const columns = defaultColumns(t);
 
   const table = useReactTable({
     data: data,
-    columns: defaultColumns,
+    columns: getDefaultColumns(t),
     getCoreRowModel: getCoreRowModel(),
     filterFns: {},
     state: {
@@ -268,7 +274,7 @@ export const BooksTable = ({ data }: { data: Book[] }) => {
               table.toggleAllColumnsVisible(!!value);
             }}
           />
-          Toggle All
+          {t("table.toggle_all")}
         </label>
         <div>
           <Separator orientation="vertical" className="border-[2px] " />
@@ -283,7 +289,7 @@ export const BooksTable = ({ data }: { data: Book[] }) => {
                   column.toggleVisibility(!!value);
                 }}
               />
-              {column.id}
+              {t(`table.${column.id}`)}
             </label>
             {index < arr.length - 1 && (
               <Separator orientation="vertical" className=" border-[1px]" />
@@ -296,7 +302,7 @@ export const BooksTable = ({ data }: { data: Book[] }) => {
           <TableCaption>
             <div className="flex justify-between items-center py-2 px-4">
               <div className="flex items-center gap-2">
-                <span>No. of Rows</span>
+                <span>{t("table.number_of_rows")}</span>
                 <Select
                   value={String(table.getState().pagination.pageSize)}
                   onValueChange={(value) => {
@@ -332,7 +338,7 @@ export const BooksTable = ({ data }: { data: Book[] }) => {
                         onClick={() => table.previousPage()}
                       >
                         <ChevronLeft className="h-4 w-4" />
-                        <span>Previous</span>
+                        <span>{t("table.previous")}</span>
                       </PaginationLink>
                     </PaginationItem>
 
@@ -414,7 +420,7 @@ export const BooksTable = ({ data }: { data: Book[] }) => {
                         }
                         onClick={() => table.nextPage()}
                       >
-                        <span>Next</span>
+                        <span>{t("table.next")}</span>
                         <ChevronRight className="h-4 w-4" />
                       </PaginationLink>
                     </PaginationItem>

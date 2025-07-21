@@ -40,5 +40,23 @@
       "global_title": "Multi-Language and Multi-Theme Support",
       "global_details": "Switch seamlessly between languages and light/dark themes. Personalize your experience with built-in localization and theme toggling."
     }
+  },
+  "table": {
+    "title": "Title",
+    "author": "Author",
+    "format": "Format",
+    "genre": "Genre",
+    "price": "Price",
+    "published_date": "Published Date",
+    "publisher": "Publisher",
+    "rating": "Rating",
+    "toggle_all": "Toggle All",
+    "min": "Min",
+    "max": "Max",
+    "search": "Search...",
+    "all": "All",
+    "number_of_rows": "Number of Rows",
+    "previous": "Previous",
+    "next": "Next"
   }
 }

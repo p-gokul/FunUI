@@ -20,7 +20,7 @@ export const bookGenres = [
 
 export type BookGenre = (typeof bookGenres)[number];
 export interface Book {
-  name: string;
+  title: string;
   author: string;
   format: BookFormat;
   genre: BookGenre;
