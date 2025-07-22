@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "heading": "Erweiterte Tabellen, Multi-Theme-Diagramme und robuste Formulare",
+    "subheading": "Entdecken Sie eine Sammlung von Shadcn UI-Blöcken und -Komponenten. Optimieren Sie Ihren Entwicklungsprozess mit leicht umsetzbaren Beispielen.",
+    "get_started": "Loslegen",
+    "github": "GitHub"
+  },
+  "navbar": {
+    "dashboard": "Dashboard",
+    "table": "Tabelle",
+    "chart": "Diagramme",
+    "form": "Formular"
+  },
+  "themes": {
+    "theme": "Thema",
+    "default": "Standard",
+    "blue": "Blau",
+    "green": "Grün",
+    "amber": "Bernstein",
+    "rose": "Rosa",
+    "purple": "Lila",
+    "orange": "Orange"
+  },
+  "dashboard": {
+    "heading": "Steigern Sie Ihre Effizienz mit intelligenten UI-Funktionen",
+    "features": {
+      "table": "Tabelle",
+      "table_title": "Leistungsstarke und anpassbare Datentabellen",
+      "table_details": "Enthält Funktionen wie Kopfzeilengruppierung, Spaltenfilterung, Sichtbarkeitseinstellungen, Zeilenauswahl, Paginierung und Sortierung — alles anpassbar nach Ihren Bedürfnissen.",
+      "chart": "Diagramme",
+      "chart_title": "Visualisieren Sie Daten mit Balken-, Kreis- und Liniendiagrammen",
+      "chart_details": "Verwandeln Sie komplexe Daten in aufschlussreiche Visualisierungen mit Balken-, Kreis- und Radar-Diagrammen – ideal für Berichte, Dashboards und Business Intelligence.",
+      "form": "Formular",
+      "form_title": "Typsichere Formulare mit Zod und React Hook Form",
+      "form_details": "Erstellen Sie robuste Formulare mit React Hook Form und Zod zur Schema-Validierung für eine präzise Eingabeverarbeitung und eine reibungslose Entwicklererfahrung.",
+      "global": "Globale Funktionen",
+      "global_title": "Mehrsprachige und Multi-Theme-Unterstützung",
+      "global_details": "Wechseln Sie nahtlos zwischen Sprachen und hellen/dunklen Themes. Passen Sie Ihre Erfahrung mit integrierter Lokalisierung und Theme-Umschaltung individuell an."
+    }
+  },
+  "table": {
+    "title": "Titel",
+    "author": "Autor",
+    "format": "Format",
+    "genre": "Genre",
+    "price": "Preis",
+    "published_date": "Veröffentlichungsdatum",
+    "publisher": "Verlag",
+    "rating": "Bewertung",
+    "toggle_all": "Alle umschalten",
+    "min": "Min",
+    "max": "Max",
+    "search": "Suchen...",
+    "all": "Alle",
+    "number_of_rows": "Anzahl der Zeilen",
+    "previous": "Zurück",
+    "next": "Weiter"
+  },
+  "charts": {
+    "genre_bar_chart": {
+      "title": "Balkendiagramm – Buchgenres",
+      "description": "Verteilung der Bücher nach Genre",
+      "footer_note": "Basierend auf 1.000 zufällig generierten Büchern",
+      "books_label": "Bücher"
+    },
+    "genre_pie_chart": {
+      "title": "Kreisdiagramm – Buchgenres",
+      "description": "Verteilung der Bücher nach Genre",
+      "footer_note": "Basierend auf 1.000 zufällig generierten Büchern"
+    },
+    "genre_radar_chart": {
+      "title": "Radar-Diagramm – Buchgenres",
+      "description": "Verteilung der Bücher nach Genre",
+      "footer_note": "Basierend auf 1.000 zufällig generierten Büchern",
+      "books_label": "Bücher"
+    }
+  },
+  "form": {
+    "form_title": "Einreichungsformular",
+    "title": "Titel",
+    "author": "Autor",
+    "format": "Format",
+    "genre": "Genre",
+    "price": "Preis",
+    "published_date": "Veröffentlichungsdatum",
+    "publisher": "Verlag",
+    "submit": "Absenden",
+    "submitting": "Wird gesendet...",
+    "placeholders": {
+      "select": "Auswählen",
+      "select_date": "Datum auswählen",
+      "title": "Die 1% Methode....",
+      "author": "James Clear...",
+      "publisher": "Penguin Random House..."
+    }
+  }
+}

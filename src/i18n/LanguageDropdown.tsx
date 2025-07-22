@@ -6,11 +6,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ES, GB } from "country-flag-icons/string/3x2";
+import { DE, ES, FR, GB, IN, JP } from "country-flag-icons/string/3x2";
 
 const languages = [
   { code: "en", label: "English", flag: GB },
+  { code: "jp", label: "日本語", flag: JP },
   { code: "es", label: "Español", flag: ES },
+  { code: "de", label: "Deutsch", flag: DE },
+  { code: "fr", label: "Français", flag: FR },
+  { code: "hi", label: "हिन्दी", flag: IN },
 ];
 
 const fallbackLang = "en";

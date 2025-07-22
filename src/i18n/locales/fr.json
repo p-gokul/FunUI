@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "heading": "Tableau avancé, graphiques multi-thèmes et formulaires robustes",
+    "subheading": "Découvrez une collection de blocs et composants Shadcn UI. Simplifiez votre flux de développement avec des exemples faciles à implémenter.",
+    "get_started": "Commencer",
+    "github": "GitHub"
+  },
+  "navbar": {
+    "dashboard": "Tableau de bord",
+    "table": "Tableau",
+    "chart": "Graphiques",
+    "form": "Formulaire"
+  },
+  "themes": {
+    "theme": "Thème",
+    "default": "Par défaut",
+    "blue": "Bleu",
+    "green": "Vert",
+    "amber": "Ambre",
+    "rose": "Rose",
+    "purple": "Violet",
+    "orange": "Orange"
+  },
+  "dashboard": {
+    "heading": "Améliorez votre productivité avec des fonctionnalités UI intelligentes",
+    "features": {
+      "table": "Tableau",
+      "table_title": "Tableaux de données puissants et personnalisables",
+      "table_details": "Inclut des fonctionnalités telles que le regroupement d'en-têtes, le filtrage par colonne, les options de visibilité, la sélection de lignes, la pagination et le tri — entièrement personnalisables selon vos besoins.",
+      "chart": "Graphiques",
+      "chart_title": "Visualisez les données avec des graphiques en barres, en secteurs et radar",
+      "chart_details": "Transformez des données complexes en visualisations claires grâce aux graphiques en barres, en secteurs et radar — idéals pour les rapports, les tableaux de bord et la business intelligence.",
+      "form": "Formulaire",
+      "form_title": "Formulaires typés avec Zod et React Hook Form",
+      "form_details": "Créez des formulaires robustes avec React Hook Form et Zod pour une validation des schémas, garantissant une gestion précise des entrées et une expérience de développement fluide.",
+      "global": "Fonctionnalités globales",
+      "global_title": "Support multi-langue et multi-thème",
+      "global_details": "Basculez facilement entre les langues et les thèmes clair/sombre. Personnalisez votre expérience grâce à la localisation intégrée et au changement de thème."
+    }
+  },
+  "table": {
+    "title": "Titre",
+    "author": "Auteur",
+    "format": "Format",
+    "genre": "Genre",
+    "price": "Prix",
+    "published_date": "Date de publication",
+    "publisher": "Éditeur",
+    "rating": "Évaluation",
+    "toggle_all": "Tout sélectionner",
+    "min": "Min",
+    "max": "Max",
+    "search": "Rechercher...",
+    "all": "Tous",
+    "number_of_rows": "Nombre de lignes",
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
+  "charts": {
+    "genre_bar_chart": {
+      "title": "Graphique en barres - Genres de livres",
+      "description": "Répartition des livres par genre",
+      "footer_note": "Basé sur 1 000 livres générés aléatoirement",
+      "books_label": "Livres"
+    },
+    "genre_pie_chart": {
+      "title": "Graphique en secteurs - Genres de livres",
+      "description": "Répartition des livres par genre",
+      "footer_note": "Basé sur 1 000 livres générés aléatoirement"
+    },
+    "genre_radar_chart": {
+      "title": "Graphique radar - Genres de livres",
+      "description": "Répartition des livres par genre",
+      "footer_note": "Basé sur 1 000 livres générés aléatoirement",
+      "books_label": "Livres"
+    }
+  },
+  "form": {
+    "form_title": "Formulaire de soumission",
+    "title": "Titre",
+    "author": "Auteur",
+    "format": "Format",
+    "genre": "Genre",
+    "price": "Prix",
+    "published_date": "Date de publication",
+    "publisher": "Éditeur",
+    "submit": "Soumettre",
+    "submitting": "Soumission en cours...",
+    "placeholders": {
+      "select": "Sélectionner",
+      "select_date": "Sélectionner une date",
+      "title": "Atomic Habits....",
+      "author": "James Clear...",
+      "publisher": "Penguin Random House..."
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "heading": "高度なテーブル、多テーマ対応チャート、堅牢なフォーム",
+    "subheading": "Shadcn UI のブロックとコンポーネントのコレクションを探索しましょう。実装が簡単なサンプルで開発ワークフローを効率化できます。",
+    "get_started": "始める",
+    "github": "GitHub"
+  },
+  "navbar": {
+    "dashboard": "ダッシュボード",
+    "table": "テーブル",
+    "chart": "チャート",
+    "form": "フォーム"
+  },
+  "themes": {
+    "theme": "テーマ",
+    "default": "デフォルト",
+    "blue": "ブルー",
+    "green": "グリーン",
+    "amber": "アンバー",
+    "rose": "ローズ",
+    "purple": "パープル",
+    "orange": "オレンジ"
+  },
+  "dashboard": {
+    "heading": "スマートUI機能でワークフローを強化",
+    "features": {
+      "table": "テーブル",
+      "table_title": "強力かつカスタマイズ可能なデータテーブル",
+      "table_details": "ヘッダーグループ化、カラムフィルター、表示切替、行選択、ページネーション、並び替えなどの機能を搭載し、柔軟にカスタマイズ可能です。",
+      "chart": "チャート",
+      "chart_title": "棒グラフ、円グラフ、レーダーチャートでデータを可視化",
+      "chart_details": "複雑なデータを棒グラフ、円グラフ、レーダーチャートで可視化し、レポートやダッシュボード、ビジネスインテリジェンスに最適です。",
+      "form": "フォーム",
+      "form_title": "ZodとReact Hook Formで型安全なフォームを構築",
+      "form_details": "React Hook FormとZodによるスキーマバリデーションで、正確な入力処理と快適な開発体験を実現します。",
+      "global": "グローバル機能",
+      "global_title": "多言語・多テーマ対応",
+      "global_details": "言語やライト／ダークテーマの切り替えがシームレスに行えます。ローカライズとテーマ切替が内蔵されており、体験をカスタマイズ可能です。"
+    }
+  },
+  "table": {
+    "title": "タイトル",
+    "author": "著者",
+    "format": "フォーマット",
+    "genre": "ジャンル",
+    "price": "価格",
+    "published_date": "出版日",
+    "publisher": "出版社",
+    "rating": "評価",
+    "toggle_all": "すべて切り替え",
+    "min": "最小",
+    "max": "最大",
+    "search": "検索...",
+    "all": "すべて",
+    "number_of_rows": "行数",
+    "previous": "前へ",
+    "next": "次へ"
+  },
+  "charts": {
+    "genre_bar_chart": {
+      "title": "棒グラフ - 本のジャンル",
+      "description": "ジャンル別の書籍分布",
+      "footer_note": "1,000冊のランダム生成された書籍に基づく",
+      "books_label": "冊"
+    },
+    "genre_pie_chart": {
+      "title": "円グラフ - 本のジャンル",
+      "description": "ジャンル別の書籍分布",
+      "footer_note": "1,000冊のランダム生成された書籍に基づく"
+    },
+    "genre_radar_chart": {
+      "title": "レーダーチャート - 本のジャンル",
+      "description": "ジャンル別の書籍分布",
+      "footer_note": "1,000冊のランダム生成された書籍に基づく",
+      "books_label": "冊"
+    }
+  },
+  "form": {
+    "form_title": "送信フォーム",
+    "title": "タイトル",
+    "author": "著者",
+    "format": "フォーマット",
+    "genre": "ジャンル",
+    "price": "価格",
+    "published_date": "出版日",
+    "publisher": "出版社",
+    "submit": "送信",
+    "submitting": "送信中...",
+    "placeholders": {
+      "select": "選択",
+      "select_date": "日付を選択",
+      "title": "アトミック・ハビッツ....",
+      "author": "ジェームズ・クリア...",
+      "publisher": "ペンギン・ランダムハウス..."
+    }
+  }
+}
