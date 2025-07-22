@@ -35,7 +35,7 @@ function BookForm() {
     methods.reset();
   };
   return (
-    <Card className="md:w-[25vw] sm:w-[50vw] mt-4">
+    <Card className="md:w-[25vw] sm:w-[50vw] mt-20">
       <CardHeader>
         <CardTitle className="text-center">{t("form.form_title")}</CardTitle>
       </CardHeader>
@@ -43,7 +43,7 @@ function BookForm() {
         <Form {...methods}>
           <form onSubmit={methods.handleSubmit(onSubmit)} className="space-y-4">
             <FormInputText
-              name="name"
+              name="title"
               label={t("form.title")}
               placeholder={t("form.placeholders.title")}
             />
