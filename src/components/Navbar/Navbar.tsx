@@ -1,10 +1,10 @@
 import { NavMenu } from "./Nav-Menu";
 import { NavigationSheet } from "./NavigationSheet";
-import { Earth } from "lucide-react";
 import { ThemeToggle } from "../Theme/Theme-Toggle";
 import { ThemeSelector } from "../Theme/theme-selector";
 import { LanguageSwitcher } from "@/i18n/LanguageDropdown";
 import { useNavigate } from "@tanstack/react-router";
+import FunUI from "/fun-ui.svg";
 
 const NavbarPage = () => {
   const navigate = useNavigate();
@@ -16,7 +16,8 @@ const NavbarPage = () => {
             className="text-xl flex flex-row space-x-1 items-center cursor-pointer"
             onClick={() => navigate({ to: "/" })}
           >
-            <Earth />
+            {/* <Earth /> */}
+            <img src={FunUI} className="w-8 h-8" />
             <div>FunUI</div>
           </div>
 
