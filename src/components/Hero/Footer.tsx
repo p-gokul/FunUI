@@ -1,11 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import {
-  DribbbleIcon,
-  GithubIcon,
-  TwitchIcon,
-  TwitterIcon,
-} from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { GithubIcon } from "lucide-react";
 
 const Footer05Page = () => {
   return (
@@ -17,22 +11,18 @@ const Footer05Page = () => {
             {/* Copyright */}
             <span className="text-muted-foreground">
               &copy; {new Date().getFullYear()}{" "}
-              <a href="p-gokul.site">p-gokul.site</a>
+              <a href="p-gokul.site">p-gokul.dev</a>
             </span>
 
             <div className="flex items-center gap-5 text-muted-foreground">
-              <Link to="/" target="_blank">
-                <TwitterIcon className="h-5 w-5" />
-              </Link>
-              <Link to="/" target="_blank">
-                <DribbbleIcon className="h-5 w-5" />
-              </Link>
-              <Link to="/" target="_blank">
-                <TwitchIcon className="h-5 w-5" />
-              </Link>
-              <Link to="/" target="_blank">
+              <div
+                onClick={() =>
+                  window.open("https://github.com/p-gokul/FunUI", "_blank")
+                }
+                className="cursor-pointer"
+              >
                 <GithubIcon className="h-5 w-5" />
-              </Link>
+              </div>
             </div>
           </div>
         </div>
