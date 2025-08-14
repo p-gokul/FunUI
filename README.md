@@ -1,69 +1,80 @@
-# React + TypeScript + Vite
+# FunUI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A feature-rich UI with multi-language support, advanced tables, dynamic multi-theme charts, and robust, type-safe forms.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Multi-Language, Multi-theme UI. Beautiful charts with different themes.
+- Advanced Tables with Column Filter, Search, No. of rows selection and Pagination.
+- Robust Form with Zod validation. Supports locale calendar.
 
-## Expanding the ESLint configuration
+## 🔧 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React, Tanstack Table, i18next, Shadcn, React Hook Form, Recharts, Typescript, Zod
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 📊 Interactive Data Tables
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Powerful table components with TanStack Table
+- Header grouping and column filtering
+- Customizable sorting and pagination
+- Row selection capabilities
+- Responsive design
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+![Table Preview](/public/table.png)
+
+### 📈 Dynamic Charts
+
+Built with Recharts, offering:
+
+- Bar charts
+- Pie charts
+- Radar charts
+- Theme-aware visualizations
+- Interactive tooltips
+
+![Chart Preview](/public/chart.png)
+
+### 📝 Type-Safe Forms
+
+- Built with React Hook Form and Zod
+- Accessible form controls
+- Reusable form components
+
+![Form Preview](/public/form.png)
+
+### 🌐 Global Features
+
+- **Internationalization**: Support for multiple languages
+  - English
+  - German
+  - Spanish
+  - French
+  - Hindi
+  - Japanese
+- **Theming**:
+  - Light/Dark mode
+  - Multiple color schemes
+  - Responsive design
+
+![Theme Preview](/public/multi-lang-theme.png)
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/p-gokul/FunUI.git
+cd FunUI
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+bun install
+```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3. Start the development server:
+
+```bash
+bun run dev
 ```
